@@ -14,24 +14,30 @@ public abstract class Pieza {
     public ColorPieza getColor() {
         return color;
     }
+
     public void setColor(ColorPieza color) {
         this.color = color;
     }
+
     public Point getPosicion() {
         return posicion;
     }
+
     public void setPosicion(Point posicion) {
         this.posicion = posicion;
     }
+
     public boolean isComida() {
         return comida;
     }
+
     public void setComida(boolean comida) {
         this.comida = comida;
     }
 
-    // Metodo equals (Equals si la pieza es igual a la otra si es el mismo tipo de pieza, del mismo color y se encuentra en la misma posicion)
-   
+    // Metodo equals (Equals si la pieza es igual a la otra si es el mismo tipo de
+    // pieza, del mismo color y se encuentra en la misma posicion)
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -51,44 +57,47 @@ public abstract class Pieza {
         return true;
     }
 
-    /** Metodo comprobar posicion
-     * 	
+    /**
+     * Metodo comprobar posicion
+     * 
      * @param p
      * @return
      */
-    protected static boolean comprobarPosicion(int p){
-        if(p>=0 && p<=7)
-            return true;
-        return false;
+    protected static boolean comprobarPosicion(int p) {
+        return (p >= 0 && p <= 7);
     }
 
     /**
-     *  Constructor principal
+     * Constructor principal
+     * 
      * @param color
      * @param x
      * @param y
      */
-    public Pieza(ColorPieza color,int x, int y){
-        this.color=color;
-        this.posicion=new Point(x,y);
-        if(comprobarPosicion(x)&&comprobarPosicion(y)){
-            this.comida=false;
-        }else
-            this.comida=true;
+    public Pieza(ColorPieza color, int x, int y) {
+        this.color = color;
+        this.posicion = new Point(x, y);
+        if (comprobarPosicion(x) && comprobarPosicion(y)) {
+            this.comida = false;
+        } else
+            this.comida = true;
     }
+
     // Segundo constructor
-    public Pieza(){
+    public Pieza() {
         this(ColorPieza.BLANCO, 10, 10);
     }
+
     /**
      * Constructor copia
+     * 
      * @param p
      */
-    public Pieza(Pieza p){
-        this(p.getColor(),p.posicion.x, p.posicion.y);
-        this.comida=p.comida;
+    public Pieza(Pieza p) {
+        this(p.getColor(), p.getPosicion().x, p.getPosicion().y);
+        this.comida = p.comida;
     }
 
     // Metodo abstracto para mover
-    public abstract void mover(int x, int y); 
+    public abstract void mover(int x, int y);
 }

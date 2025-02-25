@@ -8,9 +8,8 @@ public class Torre extends Pieza {
 
     @Override
     public void mover(int x, int y) {
-        if ((x == this.posicion.x || y == this.posicion.y) && comprobarPosicion(x) && comprobarPosicion(y)) {
-            this.posicion.x = x;
-            this.posicion.y = y;
+        if (!comida && comprobarPosicion(x) && comprobarPosicion(y) && (posicion.x == x || posicion.y == y)) {
+            posicion.move(x, y);
         }
     }
 
