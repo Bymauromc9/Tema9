@@ -1,9 +1,9 @@
 package Maraton.Ejercicio4;
 
-public class Triangulo_v3 extends Figura2D_v4{
+public class Triangulo_v4 extends Figura2D_v4{
     private String estilo;
 
-    public Triangulo_v3(double ancho, double alto, String estilo) {
+    public Triangulo_v4(double ancho, double alto, String estilo) {
         super(ancho, alto);
         if(estilo.equalsIgnoreCase("Isósceles")||estilo.equalsIgnoreCase("Rectángulo")||estilo.equalsIgnoreCase("Equilátero"))
             this.estilo = estilo;
