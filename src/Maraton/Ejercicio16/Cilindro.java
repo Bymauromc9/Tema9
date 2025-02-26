@@ -1,6 +1,6 @@
-package Maraton.Ejercicio15;
+package Maraton.Ejercicio16;
 
-public class Cilindro extends Figura3D_v2 {
+public class Cilindro implements Figura3D_v3 {
 
     private double radio;
     private double base;

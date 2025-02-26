@@ -1,12 +1,12 @@
-package Maraton.Ejercicio15;
+package Maraton.Ejercicio16;
 
-public class PrismaRectangular_v2 extends Figura3D_v2 {
+public class PrismaRectangular_v3 implements Figura3D_v3 {
 
     private double ancho;
     private double largo;
     private double alto;
 
-    public PrismaRectangular_v2(double ancho, double largo, double alto) {
+    public PrismaRectangular_v3(double ancho, double largo, double alto) {
         this.ancho = ancho;
         this.largo = largo;
         this.alto = alto;

@@ -1,10 +1,10 @@
-package Maraton.Ejercicio15;
+package Maraton.Ejercicio17;
 
-public class Esfera_v2 extends Figura3D_v2 {
+public class Esfera_v3 implements Figura3D_v3 {
 
     private double radio;
 
-    public Esfera_v2(double radio) {
+    public Esfera_v3(double radio) {
         this.radio = radio;
     }
 
